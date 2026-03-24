@@ -45,4 +45,4 @@ The dataset contains **747 Deep Fundus Images (DFIs)** with annotations:
 Dataset and trained model are not included in this repository due to large file size.
 
 👉 Download here:
-https://drive.google.com/drive/f
+https://drive.google.com/drive/folders/1M8PmlwyG1xOLydsIA5AgRC75qFNTymXA?usp=drive_link
