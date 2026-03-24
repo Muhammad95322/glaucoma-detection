@@ -5,6 +5,8 @@ from PIL import Image
 import os
 import json
 import matplotlib.pyplot as plt
+import gdown
+
 
 st.set_page_config(page_title="Glaucoma Detection Dashboard", layout="centered")
 
@@ -29,9 +31,12 @@ def preprocess_image(image):
 @st.cache_resource
 def load_model():
     model_path = os.path.join(BASE_DIR, "glaucoma_model.h5")
-    return tf.keras.models.load_model(model_path)
 
-model = load_model()
+    if not os.path.exists(model_path):
+        url = "https://drive.google.com/uc?id=1vpuMknEKh9TdVsoURvxwEYuxC6mD5l5T"
+        gdown.download(url, model_path, quiet=False)
+
+    return tf.keras.models.load_model(model_path)
 
 # ===============================
 # LOAD FILES
