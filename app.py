@@ -6,7 +6,7 @@ import os
 import json
 import matplotlib.pyplot as plt
 import gdown
-from keras.models import load_model
+
 
 st.set_page_config(page_title="Glaucoma Detection Dashboard", layout="centered")
 
@@ -36,8 +36,9 @@ def load_model():
         url = "https://drive.google.com/uc?id=1vpuMknEKh9TdVsoURvxwEYuxC6mD5l5T"
         gdown.download(url, model_path, quiet=False)
 
-    return load_model(model_path)
+    return tf.keras.models.load_model(model_path)
 
+model = load_model()
 # ===============================
 # LOAD FILES
 # ===============================
