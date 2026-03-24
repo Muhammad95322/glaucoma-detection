@@ -1,0 +1,13 @@
+# Folder besar
+Images/
+images_resized/
+
+# Model AI
+*.h5
+
+# Cache / ga penting
+__pycache__/
+*.pyc
+
+# Notebook checkpoint
+.ipynb_checkpoints/
